@@ -1,4 +1,5 @@
 # Super-duper command
+# With every clear ubuntu instalation I must go through all of those commands. It's f**king annoying
 
 sudo apt install keepassxc -y \
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
@@ -61,16 +62,13 @@ sudo apt install keepassxc -y \
 && sudo apt-get upgrade -y \
 && sudo apt autoclean -y \
 && sudo apr autoremove -y
-
-
+&& echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc
 
 
 # install from sofware center
 skype
 audacity
 atom
-
-
 
 
 # set manually
