@@ -1,14 +1,17 @@
 # Super-duper command
 # With every clear ubuntu instalation I must go through all of those commands. It's f**king annoying
 
-sudo apt install keepassxc -y \
+sudo apt-get update -y \
+&& sudo apt-get upgrade -y \
+&& sudo apt autoclean -y \
+&& sudo apr autoremove -y
+&& sudo apt install keepassxc -y \
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
 && sudo snap install --classic code \
 && sudo apt-get install git-core  curl -y  \
 && sudo apt install zsh -y  \
 && chsh -s $(which zsh)  \
-&& sudo apt-get update -y \
 && sudo apt upgrade -y \
 && sudo apt-get install powerline fonts-powerline -y \
 && git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
@@ -39,24 +42,17 @@ sudo apt install keepassxc -y \
 && sudo make install \
 && sudo systemctl daemon-reload  \
 && sudo apt install pavucontrol \
-&& sudo apt-get update \
 && sudo apt-get install blueman \
 && sudo apt install terminator -y \
-&& sudo apt-get update -y \
 && sudo apt-get upgrade -y \
 && sudo apt autoclean -y \
 && npm i -g gatsby \
 && sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y \
 && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
 && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
-&& sudo apt update \
 && sudo apt install docker-ce docker-ce-cli containerd.io -y \
 && sudo usermod -aG docker $USER \
 && sudo apt-get install gitk -y  \
-&& sudo apt-get update -y \
-&& sudo apt-get upgrade -y \
-&& sudo apt autoclean -y \
-&& sudo apr autoremove -y \
 && sudo apt-get install fonts-symbola \
 && sudo apt-get update -y \
 && sudo apt-get upgrade -y \
