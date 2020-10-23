@@ -5,7 +5,7 @@ sudo apt-get update -y \
 && sudo apt-get upgrade -y \
 && sudo apt autoclean -y \
 && sudo apr autoremove -y
-&& sudo apt install keepassxc -y \
+&& sudo snap install keepassxc -y \ # For browser integration you must run script from the official keepass page
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
 && sudo snap install --classic code \
