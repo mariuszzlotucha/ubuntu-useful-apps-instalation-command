@@ -16,7 +16,6 @@ nvm install node && \
 source ~/.zshrc && \
 npm install -g yarn gatsby create-react-app && \
 yarn set version latest && \
-
 update && \
 sudo apt-get install powerline fonts-powerline xclip virtualbox openssh-client libical-dev glib2.0 gitk fonts-symbola -y && \
 sudo apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386  -y && \
