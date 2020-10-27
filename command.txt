@@ -12,7 +12,8 @@ sudo chsh -s $(which zsh)  && \
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1  && \
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc" && \
 echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
-source ~/.zshrc && \
+source ~/.zshrc && 
+
 update && \
 sudo apt-get install powerline fonts-powerline xclip virtualbox openssh-client libical-dev glib2.0 gitk fonts-symbola -y && \
 sudo apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386  -y && \
