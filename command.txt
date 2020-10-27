@@ -26,7 +26,7 @@ sudo apt-get install zsh powerline fonts-powerline git-core xclip virtualbox ope
 && ./configure \
 && sudo make install \
 && sudo systemctl daemon-reload  \
-&& sudo apt-get install blueman \
+&& sudo apt-get install blueman -y \
 && cd \
 && rm bluez-5.52.tar.xz \
 && update \ 
