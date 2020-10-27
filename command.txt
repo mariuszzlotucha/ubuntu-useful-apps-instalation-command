@@ -1,53 +1,54 @@
 # Super-duper command
 # With every clear ubuntu instalation I must go through all of those commands. It's f**king annoying
 
-sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y\
-&& sudo apt-get install zsh powerline fonts-powerline git-core xclip virtualbox openssh-client curl libical-dev glib2.0 gitk fonts-symbola -y \
-&& sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools terminator gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386  -y \
-&& sudo snap install keepassxc caprine vlc rpi-imager \
-&& sudo snap install --classic code \
-&& wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-&& sudo apt install ./google-chrome-stable_current_amd64.deb -y \
-&& rm google-chrome-stable_current_amd64.deb \
-&& sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
-&& echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc \
-&& sudo chsh -s $(which zsh)  \
-&& source ~/.zshrc \
-&& zsh \
-&& update \
-&& curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh \
-&& source ~/.zshrc \
-&& nvm install node \
-&& source ~/.zshrc \
-&& npm install -g yarn \
-&& yarn set version latest \
-&& wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb \
-&& sudo gdebi --non-interactive AdbeRdr9.5.5-1_i386linux_enu.deb \
-&& rm AdbeRdr9.5.5-1_i386linux_enu.deb \
-&& update \ 
-&& npm i -g gatsby \
-&& curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
-&& sudo apt-key fingerprint 0EBFCD88 \
-&& sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable' \
-&& update \
-&& sudo apt-get install docker-ce docker-ce-cli containerd.io -y \
-&& sudo usermod -aG docker $USER \
-&& wget https://download.eset.com/com/eset/apps/home/eav/linux/latest/eset_nod32av_64bit_pl.linux \
-&& sudo chmod +x eset_nod32av_64bit_pl.linux \
-&& update \
-&& wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.52.tar.xz \
-&& tar -xf bluez-5.52.tar.xz \
-&& cd bluez-5.52 \
-&& ./configure \
-&& sudo make install \
-&& sudo systemctl daemon-reload  \
-&& sudo apt-get install blueman -y \
-&& cd \
-&& update \
-&& sudo apt autoremove -y \
-&& sudo docker run hello-world \
-&& rm bluez-5.52.tar.xz \
-&& echo 'I am done here'
+sudo apt-get install zsh -y && \
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
+echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
+sudo chsh -s $(which zsh)  && \
+zsh
+
+update && \
+sudo apt-get install powerline fonts-powerline git-core xclip virtualbox openssh-client curl libical-dev glib2.0 gitk fonts-symbola -y && \
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools terminator gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386  -y && \
+sudo snap install keepassxc caprine vlc rpi-imager && \
+sudo snap install --classic code && \
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+sudo apt install ./google-chrome-stable_current_amd64.deb -y && \
+rm google-chrome-stable_current_amd64.deb && \
+update && \
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh && \
+source ~/.zshrc && \
+nvm install node && \
+source ~/.zshrc && \
+npm install -g yarn && \
+yarn set version latest && \
+wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb && \
+sudo gdebi --non-interactive AdbeRdr9.5.5-1_i386linux_enu.deb && \
+rm AdbeRdr9.5.5-1_i386linux_enu.deb && \
+update \&& \
+npm i -g gatsby && \
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
+sudo apt-key fingerprint 0EBFCD88 && \
+sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable' && \
+update && \
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y && \
+sudo usermod -aG docker $USER && \
+wget https://download.eset.com/com/eset/apps/home/eav/linux/latest/eset_nod32av_64bit_pl.linux && \
+sudo chmod +x eset_nod32av_64bit_pl.linux && \
+update && \
+wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.52.tar.xz && \
+tar -xf bluez-5.52.tar.xz && \
+cd bluez-5.52 && \
+./configure && \
+sudo make install && \
+sudo systemctl daemon-reload  && \
+sudo apt-get install blueman -y && \
+cd && \
+update && \
+sudo apt autoremove -y && \
+sudo docker run hello-world && \
+rm bluez-5.52.tar.xz && \
+echo 'I am done here'
 
 # install and activate ES ET
 
