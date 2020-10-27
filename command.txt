@@ -10,7 +10,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
 && rm google-chrome-stable_current_amd64.deb \
 && sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
-&& echo 'alias update="sudo apt-get update -y && suupdatedo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc \
+&& echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc \
 && sudo chsh -s $(which zsh)  \
 && source ~/.zshrc \
 && zsh \
