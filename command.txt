@@ -3,7 +3,10 @@
 
 && sudo apt install zsh -y  \
 && chsh -s $(which zsh)  \
-&& sudo apt-get install powerline fonts-powerline -y \
+&& sudo apt-get update -y \
+&& sudo apt-get upgrade -y
+&& sudo apt-get install powerline fonts-powerline git-core xclip virtualbox ifconfig openssh-client curl libical-dev glib2.0 gitk fonts-symbola -y \
+&& sudo apt install libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol rpi-imager terminator apt-transport-https ca-certificates curl gnupg-agent software-properties-common docker-ce docker-ce-cli containerd.io gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 -y \
 && git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
 && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc  \
 && chsh -s /bin/zsh \
@@ -14,11 +17,9 @@
 && echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc
 && source  ~/.zshrc 
 && update
-&& sudo snap install keepassxc vlc  --classic code -y \ # For browser integration you must run script from the official keepass page
+&& sudo snap install keepassxc caprine vlc  --classic code -y \ # For browser integration you must run script from the official keepass page
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
-&& sudo apt-get install git-core xclip  curl libical-dev glib2.0 gitk fonts-symbola -y  \
-&& sudo apt install libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol terminator apt-transport-https ca-certificates curl gnupg-agent software-properties-common docker-ce docker-ce-cli containerd.io gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 -y \
 && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh \
 && rm google-chrome-stable_current_amd64.deb \
 && nvm install node \
@@ -48,7 +49,6 @@ audacity
 atom
 screenshot
 spotify
-caprine
 
 # set manually
 nano ~/.zshrc # ZSH_THEME="agnoster" 
