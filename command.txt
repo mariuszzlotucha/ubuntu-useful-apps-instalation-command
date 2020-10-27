@@ -8,10 +8,10 @@ sudo apt-get install terminator zsh curl git -y
 zsh 
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
-echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
 sudo chsh -s $(which zsh)  && \
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1  && \
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc" && \
+echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
 source ~/.zshrc && \
 update && \
 sudo apt-get install powerline fonts-powerline xclip virtualbox openssh-client libical-dev glib2.0 gitk fonts-symbola -y && \
