@@ -6,6 +6,7 @@ sudo apt install zsh -y  \
 && sudo apt-get update -y \
 && sudo apt-get upgrade -y \
 && sudo apt autoremove -y \
+&& sudo apt autoclean -y \
 && sudo apt-get install powerline fonts-powerline git-core xclip virtualbox openssh-client curl libical-dev glib2.0 gitk fonts-symbola -y \
 && sudo apt install libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools rpi-imager terminator apt-transport-https ca-certificates curl gnupg-agent software-properties-common docker-ce docker-ce-cli containerd.io gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 -y \
 && git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
@@ -23,6 +24,7 @@ sudo apt install zsh -y  \
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
 && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh \
 && rm google-chrome-stable_current_amd64.deb \
+&& update \
 && nvm install node \
 && npm install -g yarn \
 && yarn set version latest \
