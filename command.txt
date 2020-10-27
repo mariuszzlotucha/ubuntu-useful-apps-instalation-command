@@ -1,10 +1,18 @@
 # Super-duper command
 # With every clear ubuntu instalation I must go through all of those commands. It's f**king annoying
 
-echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.bashrc && \
-source ~/.bashrc && \
-update && \
 sudo apt-get install terminator zsh curl git -y && \
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
+echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
+sudo chsh -s /bin/zsh $USER && \
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh && \
+source ~/.zshrc && \
+nvm install node && \
+source ~/.zshrc && \
+yarn set version latest && \
+
+update && \
+npm install -g yarn gatsby create-react-app && \
 sudo apt-get install powerline fonts-powerline xclip virtualbox openssh-client libical-dev glib2.0 gitk fonts-symbola -y && \
 sudo apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386  -y && \
 sudo snap install keepassxc caprine vlc rpi-imager && \
@@ -42,16 +50,6 @@ sudo apt autoremove -y && \
 rm bluez-5.52.tar.xz && \
 sudo docker run hello-world && \
 sudo groupadd docker && sudo gpasswd -a $USER docker && sudo service docker restart \
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
-echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
-sudo chsh -s /bin/zsh $USER && zsh
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh && \
-source ~/.zshrc && \
-nvm install node && \
-source ~/.zshrc && \
-npm install -g yarn gatsby create-react-app && \
-yarn set version latest && \
 echo 'I am done here'
 
 #optionaly 
