@@ -10,9 +10,10 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
 && rm google-chrome-stable_current_amd64.deb \
 && sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
-&& echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc \
+&& echo 'alias update="sudo apt-get update -y && suupdatedo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc \
 && sudo chsh -s $(which zsh)  \
 && source ~/.zshrc \
+&& zsh \
 && update \
 && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh \
 && source ~/.zshrc \
@@ -27,7 +28,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && npm i -g gatsby \
 && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
 && sudo apt-key fingerprint 0EBFCD88 \
-&& sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+&& sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable' \
 && update \
 && sudo apt-get install docker-ce docker-ce-cli containerd.io -y \
 && sudo usermod -aG docker $USER \
@@ -45,7 +46,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && update \
 && sudo docker run hello-world \
 && rm bluez-5.52.tar.xz \
-&& echo "I'm done here"
+&& echo 'I am done here'
 
 # install and activate ES ET
 
