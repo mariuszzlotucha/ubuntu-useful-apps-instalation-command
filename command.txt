@@ -28,6 +28,7 @@ sudo apt-get install zsh powerline fonts-powerline git-core xclip virtualbox ope
 && sudo systemctl daemon-reload  \
 && sudo apt-get install blueman \
 && cd \
+&& rm bluez-5.52.tar.xz \
 && update \ 
 && npm i -g gatsby \
 && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
