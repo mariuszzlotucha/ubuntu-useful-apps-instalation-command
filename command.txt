@@ -37,7 +37,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && sudo apt-key fingerprint 0EBFCD88 \
 && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
 && update \
-&& sudo apt-get install docker-ce docker-ce-cli containerd.io -y ' \
+&& sudo apt-get install docker-ce docker-ce-cli containerd.io -y \
 && sudo usermod -aG docker $USER \
 && wget https://download.eset.com/com/eset/apps/home/eav/linux/latest/eset_nod32av_64bit_pl.linux \
 && sudo chmod +x eset_nod32av_64bit_pl.linux \
