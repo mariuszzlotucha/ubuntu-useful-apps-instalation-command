@@ -16,8 +16,7 @@ update && \
 wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb && \
 sudo gdebi --non-interactive AdbeRdr9.5.5-1_i386linux_enu.deb && \
 rm AdbeRdr9.5.5-1_i386linux_enu.deb && \
-update \&& \
-npm i -g gatsby && \
+update && \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
 sudo apt-key fingerprint 0EBFCD88 && \
  sudo add-apt-repository \
@@ -51,7 +50,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh &
 source ~/.zshrc && \
 nvm install node && \
 source ~/.zshrc && \
-npm install -g yarn && \
+npm install -g yarn gatsby create-react-app && \
 yarn set version latest && \
 echo 'I am done here'
 
