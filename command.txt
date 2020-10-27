@@ -42,9 +42,9 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && sudo systemctl daemon-reload  \
 && sudo apt-get install blueman -y \
 && cd \
+&& update \
 && sudo docker run hello-world \
 && rm bluez-5.52.tar.xz \
-&& update \
 && echo "I'm done here"
 
 # install and activate ES ET
