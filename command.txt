@@ -1,7 +1,8 @@
 # Super-duper command
 # With every clear ubuntu instalation I must go through all of those commands. It's f**king annoying
 
-sudo apt-get install zsh powerline fonts-powerline git-core xclip virtualbox openssh-client curl libical-dev glib2.0 gitk fonts-symbola -y \
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y \
+&& sudo apt-get install zsh powerline fonts-powerline git-core xclip virtualbox openssh-client curl libical-dev glib2.0 gitk fonts-symbola -y \
 && sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools terminator gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386  -y \
 && sudo snap install keepassxc caprine vlc rpi-imager \
 && sudo snap install --classic code \
