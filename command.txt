@@ -6,8 +6,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
 sudo chsh -s /bin/zsh $USER && \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh && \
-nvm install node && \
-zsh
+nvm install node
+
+# set manually
+nano ~/.zshrc # ZSH_THEME="agnoster" 
+
+#logout and login to the system
 
 update && \
 npm install -g yarn gatsby create-react-app && \
@@ -49,7 +53,7 @@ sudo apt autoremove -y && \
 rm bluez-5.52.tar.xz && \
 sudo docker run hello-world && \
 sudo groupadd docker && sudo gpasswd -a $USER docker && sudo service docker restart \
-echo 'I am done here'
+echo "I'm done here"
 
 #optionaly 
 sudo reboot
@@ -65,9 +69,6 @@ atom
 screenshot
 spotify
 
-# set manually
-nano ~/.zshrc # ZSH_THEME="agnoster" 
-source  ~/.zshrc 
 
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
