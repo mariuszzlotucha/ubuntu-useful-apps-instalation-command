@@ -1,7 +1,7 @@
 # Super-duper command
 # With every clear ubuntu instalation I must go through all of those commands. It's f**king annoying
 
-&& sudo apt install zsh -y  \
+sudo apt install zsh -y  \
 && chsh -s $(which zsh)  \
 && sudo apt-get update -y \
 && sudo apt-get upgrade -y \
