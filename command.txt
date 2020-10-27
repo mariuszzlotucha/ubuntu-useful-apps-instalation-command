@@ -1,26 +1,15 @@
 # Super-duper command
 # With every clear ubuntu instalation I must go through all of those commands. It's f**king annoying
 
-sudo apt install zsh -y  \
-&& chsh -s $(which zsh)  \
-&& sudo apt-get update -y \
-&& sudo apt-get upgrade -y \
-&& sudo apt autoremove -y \
-&& sudo apt autoclean -y \
+sudo apt-get install zsh -y  \
 && sudo apt-get install powerline fonts-powerline git-core xclip virtualbox openssh-client curl libical-dev glib2.0 gitk fonts-symbola -y \
-&& sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y \
-&& sudo apt install libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools terminator gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 -y \
-&& git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
-&& cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc  \
-&& chsh -s /bin/zsh \
-&& cd .oh-my-zsh \
-&& cd \
-&& git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1  \
-&& echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc" \
+&& sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools terminator gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386  -y \
+&& sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
 && echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc \
-&& source  ~/.zshrc \
+&& chsh -s $(which zsh)  \
 && update \
-&& sudo snap install keepassxc caprine vlc pi-imager --classic code -y \
+&& sudo snap install keepassxc caprine vlc pi-imager \
+&& sudo snap install --classic code \
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
 && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh \
