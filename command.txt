@@ -6,13 +6,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
 sudo chsh -s /bin/zsh $USER && \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh && \
-source ~/.zshrc && \
 nvm install node && \
-source ~/.zshrc && \
-yarn set version latest
+zsh
 
 update && \
 npm install -g yarn gatsby create-react-app && \
+yarn set version latest && \
 sudo apt-get install powerline fonts-powerline xclip virtualbox openssh-client libical-dev glib2.0 gitk fonts-symbola -y && \
 sudo apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol net-tools gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386  -y && \
 sudo snap install keepassxc caprine vlc rpi-imager && \
