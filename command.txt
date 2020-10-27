@@ -9,7 +9,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
 && rm google-chrome-stable_current_amd64.deb \
-# && sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
+&& sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
 && echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc \
 && sudo chsh -s $(which zsh)  \
 && source ~/.zshrc \
@@ -17,20 +17,12 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh \
 && source ~/.zshrc \
 && nvm install node \
+&& source ~/.zshrc \
 && npm install -g yarn \
 && yarn set version latest \
 && wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb \
 && sudo gdebi --non-interactive AdbeRdr9.5.5-1_i386linux_enu.deb \
 && rm AdbeRdr9.5.5-1_i386linux_enu.deb \
-&& wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.52.tar.xz \
-&& tar -xf bluez-5.52.tar.xz \
-&& cd bluez-5.52 \
-&& ./configure \
-&& sudo make install \
-&& sudo systemctl daemon-reload  \
-&& sudo apt-get install blueman -y \
-&& cd \
-&& rm bluez-5.52.tar.xz \
 && update \ 
 && npm i -g gatsby \
 && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
@@ -42,7 +34,17 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && su
 && wget https://download.eset.com/com/eset/apps/home/eav/linux/latest/eset_nod32av_64bit_pl.linux \
 && sudo chmod +x eset_nod32av_64bit_pl.linux \
 && update \
+&& wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.52.tar.xz \
+&& tar -xf bluez-5.52.tar.xz \
+&& cd bluez-5.52 \
+&& ./configure \
+&& sudo make install \
+&& sudo systemctl daemon-reload  \
+&& sudo apt-get install blueman -y \
+&& cd \
 && sudo docker run hello-world \
+&& rm bluez-5.52.tar.xz \
+&& update \
 && echo "I'm done here"
 
 # install and activate ES ET
