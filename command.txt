@@ -8,9 +8,10 @@ sudo apt-get install zsh powerline fonts-powerline git-core xclip virtualbox ope
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && sudo apt install ./google-chrome-stable_current_amd64.deb -y \
 && rm google-chrome-stable_current_amd64.deb \
-&& sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
+# && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended \
 && echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc \
 && sudo chsh -s $(which zsh)  \
+&& source ~/.zshrc \
 && update \
 && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh \
 && source ~/.zshrc \
