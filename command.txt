@@ -5,6 +5,8 @@ sudo apt-get install zsh -y && \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
 echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y"' >> ~/.zshrc && \
 sudo chsh -s $(which zsh)  && \
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1  && \
+echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc" && \
 zsh
 
 update && \
