@@ -18,7 +18,7 @@ sudo apt-get install zsh powerline fonts-powerline git-core xclip virtualbox ope
 && npm install -g yarn \
 && yarn set version latest \
 && wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb \
-&& sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb \
+&& sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb -y \
 && rm AdbeRdr9.5.5-1_i386linux_enu.deb \
 && wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.52.tar.xz \
 && tar -xf bluez-5.52.tar.xz \
