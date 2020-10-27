@@ -1,18 +1,8 @@
 # Super-duper command
 # With every clear ubuntu instalation I must go through all of those commands. It's f**king annoying
 
-sudo apt-get update -y \
-&& sudo apt-get upgrade -y \
-&& sudo apt autoclean -y \
-&& sudo apr autoremove -y
-&& sudo snap install keepassxc -y \ # For browser integration you must run script from the official keepass page
-&& wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-&& sudo apt install ./google-chrome-stable_current_amd64.deb -y \
-&& sudo snap install --classic code \
-&& sudo apt-get install git-core  curl -y  \
 && sudo apt install zsh -y  \
 && chsh -s $(which zsh)  \
-&& sudo apt upgrade -y \
 && sudo apt-get install powerline fonts-powerline -y \
 && git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
 && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc  \
@@ -21,51 +11,44 @@ sudo apt-get update -y \
 && cd \
 && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1  \
 && echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc" \
-&& sudo snap install vlc \
+&& echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc
+&& source  ~/.zshrc 
+&& update
+&& sudo snap install keepassxc vlc  --classic code -y \ # For browser integration you must run script from the official keepass page
+&& wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+&& sudo apt install ./google-chrome-stable_current_amd64.deb -y \
+&& sudo apt-get install git-core xclip  curl libical-dev glib2.0 gitk fonts-symbola -y  \
+&& sudo apt install libdbus-1-dev libudev-dev libical-dev libreadline-dev pavucontrol terminator apt-transport-https ca-certificates curl gnupg-agent software-properties-common docker-ce docker-ce-cli containerd.io gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 -y \
 && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh \
 && rm google-chrome-stable_current_amd64.deb \
-&& source ~/.zshrc \
 && nvm install node \
 && npm install -g yarn \
 && yarn set version latest \
-&& sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 -y \
 && wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb \
 && sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb \
-&& sudo apt-get install xclip -y  \
 && rm AdbeRdr9.5.5-1_i386linux_enu.deb \
-&& sudo apt-get install libical-dev glib2.0 -y \
-&& sudo apt install libdbus-1-dev libudev-dev libical-dev libreadline-dev \
 && wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.52.tar.xz \
 && tar -xf bluez-5.52.tar.xz \
 && cd bluez-5.52 \
 && ./configure \
 && sudo make install \
 && sudo systemctl daemon-reload  \
-&& sudo apt install pavucontrol \
 && sudo apt-get install blueman \
-&& sudo apt install terminator -y \
-&& sudo apt-get upgrade -y \
-&& sudo apt autoclean -y \
+&& update
 && npm i -g gatsby \
-&& sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y \
 && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
 && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
-&& sudo apt install docker-ce docker-ce-cli containerd.io -y \
 && sudo usermod -aG docker $USER \
-&& sudo apt-get install gitk -y  \
-&& sudo apt-get install fonts-symbola \
-&& sudo apt-get update -y \
-&& sudo apt-get upgrade -y \
-&& sudo apt autoclean -y \
-&& sudo apr autoremove -y
-&& echo 'alias update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"' >> ~/.zshrc
+&& update
 
 
 # install from sofware center
 skype
 audacity
 atom
-
+screenshot
+spotify
+caprine
 
 # set manually
 nano ~/.zshrc # ZSH_THEME="agnoster" 
