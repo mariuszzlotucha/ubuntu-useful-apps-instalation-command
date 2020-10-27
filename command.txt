@@ -42,7 +42,8 @@
 && sudo usermod -aG docker $USER \
 && wget https://download.eset.com/com/eset/apps/home/eav/linux/latest/eset_nod32av_64bit_pl.linux \
 && sudo chmod +x eset_nod32av_64bit_pl.linux \
-&& update
+&& update \
+&& echo "I'm done here"
 
 # activate ES ET
 
